@@ -24,6 +24,8 @@ const Home = () => {
     <VStack alignItems={'start'}>
       <Heading mb={8}>Home</Heading>
       <button onClick={Shoper}>shopper</button>
+      <button onClick={Shoper}>shopper</button>
+
     </VStack>
   );
 };
