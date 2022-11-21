@@ -5,7 +5,7 @@ import { useMoralis } from 'react-moralis'
 
 const Home = () => {
 
-  const { Moralis } = useMoralis();
+  const { Moralis, user, account } = useMoralis();
 
   async function Shoper() {
 
@@ -14,7 +14,8 @@ const Home = () => {
     const shopping = new Shop()
 
     shopping.set('shopItem', 'watch')
-    shopping.set('etheAddress', '0x12')
+    shopping.set('ethAddress', account)
+    shopping.set('User', user?.getUsername)
 
     await shopping.save()
 
